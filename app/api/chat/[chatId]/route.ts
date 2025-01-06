@@ -66,7 +66,6 @@ export async function POST(
     await memoryManager.writeToHistory("User: " + prompt + "\n", companionKey);
 
     const recentChatHistory = await memoryManager.readLatestHistory(companionKey);
-    console.log('recentChatHistory: ', recentChatHistory);
 
     const similarDocs = await memoryManager.vectorSearch(
       recentChatHistory,
