@@ -32,7 +32,8 @@ export const ImageUpload = ({
         options={{
           maxFiles: 1
         }}
-        uploadPreset="mmukuw46"
+        // uploadPreset="mmukuw46"
+        uploadPreset="nf_companion"
       >
         <div className="
           p-4
