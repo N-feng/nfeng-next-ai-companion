@@ -1,5 +1,5 @@
 import prismadb from "@/lib/prismadb";
-import { auth, redirectToSignIn } from '@clerk/nextjs';
+import { auth, redirectToSignIn } from '@clerk/nextjs/server';
 
 import { CompanionForm } from "./components/compainion-form";
 
