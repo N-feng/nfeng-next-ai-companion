@@ -1,6 +1,11 @@
-import { clerkMiddleware } from '@clerk/nextjs/server'
+import { authMiddleware } from '@clerk/nextjs/server'
 
-export default clerkMiddleware()
+// See https://clerk.com/docs/references/nextjs/auth-middleware
+// for more information about configuring your Middleware
+export default authMiddleware({
+  // Allow signed out users to access the specified routes:
+  publicRoutes: ['/api/webhook', '/api/webhooks/clerk'],
+});
 
 export const config = {
   matcher: [
