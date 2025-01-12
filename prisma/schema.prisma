@@ -50,6 +50,27 @@ model Companion {
   // @@fulltext([name])
 }
 
+model User {
+  id              String      @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId         String      
+  email           String
+  username        String    
+  // avatarUrl       String
+  photo           String
+  // description     String
+  firstName       String
+  lastName        String
+  // planId          Int         @default(1)
+  // creditBalance   Int         @default(10)
+
+  // githubUrl       String
+  // linkedinUrl     String
+  // userId          String
+  // projects        Project[]   @relation("UserToProject")
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+}
+
 enum Role {
   user
   system

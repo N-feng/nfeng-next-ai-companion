@@ -31,6 +31,7 @@ const RootPage = async ({
       },
     },
   });
+    // console.log('data: ', data);
   
   const categories = await prismadb.category.findMany();
 
